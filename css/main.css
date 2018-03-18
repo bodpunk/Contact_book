@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Задаем главный блок и центрируем содержимое */
+.contacts-book {
+  text-align: center;
+}
+
+/* Все списки разметки задаем табличными строками на css */
+.contacts-book ul {
+  display: table-row;
+  height: 30px;
+}
+
+/* Элементы списков задаем табличными ячейками*/
+.contacts-book li {
+  display: table-cell;
+  width: 200px;
+  padding: 5px;
+}
+
+/* Блок добавления контактов */
+.contacts-book__add-contact {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.add-contact__caption {
+  display: inline-block;
+  position: absolute;
+  left: -135px;
+  top: 5px;
+}
+
+.contacts-book__add-contact input {
+  width: 100%;
+}
+
+.contacts-book__add-contact button {
+  position: absolute;
+  top: 6px;
+  left: 100%;
+  margin-left: 5px;
+  width: 140px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  cursor: pointer;
+}
+
+.contacts-book__add-contact button:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+/* Блок сохраненных контактов - таблица */
+.contacts-book__saved-contacts {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid grey;
+  position: relative;
+}
+
+.saved-contacts__title {
+  margin: 5px 0;
+}
+
+/* Шапка таблицы */
+.saved-contacts__caption-row {
+  background-color: #d3d3d3;
+  font-weight: bold;
+}
+
+.saved-contacts__item {
+  position: relative;
+}
+
+.saved-contacts__item:hover {
+  background-color: #dddddd;
+}
+
+/* Стилизация ячеек таблицы */
+.contacts-book__saved-contacts li {
+  border: 1px solid grey;
+  text-transform: capitalize;
+}
+
+.contacts-book__saved-contacts ul:not(:first-child) {
+  text-align: left;
+}
+
+/* Иконка контакта (инициалы) */
+.saved-contacts__icon {
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: lightgrey;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  padding: 5px;
+  left: -35px;
+  text-transform: uppercase;
+}
+
+/* Кнопка удаления контакта */
+.saved-contacts__delete {
+  position: absolute;
+  right: -75px;
+  top: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  cursor: pointer;
+}
+
+.saved-contacts__delete:hover {
+  background-color: rgb(200, 200, 200);
+}

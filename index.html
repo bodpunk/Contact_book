@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Записная книга</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Записная книга -->
+  <div class="contacts-book">
+    <h1>Записная книга</h1>
+    <!-- Добавление контакта -->
+    <form class="contacts-book__add-contact">
+      <ul>
+        <span class="add-contact__caption">Добавить контакт:</span>
+        <li><input type="text" name="name" placeholder="Имя" autocomplete="given-name" required></li>
+        <li><input type="text" name="surname" placeholder="Фамилия" autocomplete="family-name" required></li>
+        <li><input type="tel" name="phone" placeholder="Телефон" autocomplete="tel-national" pattern="^[ 0-9]+$" required></li>
+      </ul>
+      <button class="add-contacts__button" type="button">Сохранить контакт</button>
+    </form>
+    <!-- Сохраненные контакты -->
+    <div class="contacts-book__saved-contacts">
+      <h3 class="saved-contacts__title">Сохраненные контакты</h3>
+      <!-- Шапка (первая строка) таблицы -->
+      <div class="saved-contacts__header">
+        <ul class="saved-contacts__caption-row">
+          <li class="caption-row__name">Имя</li>
+          <li class="caption-row__surname">Фамилия</li>
+          <li class="caption-row__tel">Телефон</li>
+        </ul>
+      </div>
+      <!-- Сюда добавляются сохраненные контакты -->
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
